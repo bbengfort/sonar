@@ -6,6 +6,8 @@ database:
     host: "localhost"
     port: 27017
     database: "sonar"
+    collection: "logs"
 endpoints:
     - http://example.com/status/
     - https://www.example.com/heartbeat/
+wait: 10

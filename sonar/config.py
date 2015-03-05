@@ -33,6 +33,7 @@ class DatabaseConfiguration(Configuration):
     host            = "localhost"
     port            = 27017
     database        = "sonar"
+    collection      = "logs"
 
 ##########################################################################
 ## Sonar Configuration Defaults
@@ -45,6 +46,7 @@ class SonarConfiguration(Configuration):
 
     CONF_PATHS = [
         '/etc/sonar.yaml',                    # The global configuration
+        '/usr/local/etc/sonar.yaml',          # Global config for Mac OS X
         os.path.expanduser('~/.sonar.yaml'),  # User specific configuration
         os.path.abspath('conf/sonar.yaml'),   # Local directory configuration
     ]
@@ -53,6 +55,7 @@ class SonarConfiguration(Configuration):
     testing         = False                   # Are we in testing mode?
     database        = DatabaseConfiguration() # The database configuration
     endpoints       = []                      # Endpoints to ping
+    wait            = 5                       # Wait in seconds for each trial
 
 ##########################################################################
 ## Import this loaded Configuration
