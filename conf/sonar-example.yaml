@@ -1,0 +1,11 @@
+## Sonar Configuration
+
+debug: false
+testing: false
+database:
+    host: "localhost"
+    port: 27017
+    database: "sonar"
+endpoints:
+    - http://example.com/status/
+    - https://www.example.com/heartbeat/
