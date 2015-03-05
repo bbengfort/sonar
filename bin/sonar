@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+# sonar
+# Action Script for Sonar
+#
+# Author:   Benjamin Bengfort <benjamin@bengfort.com>
+# Created:  Thu Mar 05 00:08:16 2015 -0500
+#
+# Copyright (C) 2015 Bengfort.com
+# For license information, see LICENSE.txt
+#
+# ID: sonar [] benjamin@bengfort.com $
+
+"""
+Action Script for Sonar
+"""
+
+##########################################################################
+## Imports
+##########################################################################
+
+import sonar
+import argparse
+
+##########################################################################
+## Module Configuration
+##########################################################################
+
+DESCRIPTION = "A small, lightweight uptime app"
+VERSION     = sonar.get_version()
+EPILOG      = "Please file bug reports on Github"
+
+##########################################################################
+## Main Statement
+##########################################################################
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description=DESCRIPTION, version=VERSION, epilog=EPILOG)
+    args   = parser.parse_args()
+
+    parser.exit(0)
